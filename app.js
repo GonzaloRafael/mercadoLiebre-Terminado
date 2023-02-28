@@ -2,8 +2,10 @@ const express = require ('express');
 const app = express ();
 const path = require('path');
 
+const port = process.env.PORT || 3003;
 
-app.listen(3003, () => console.log("Servidor corriendo en el 3003"));
+
+app.listen(port, () => console.log("Servidor corriendo en el 3003"));
 
 app.use(express.static("public"));
 
